@@ -4,9 +4,11 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import os
 from datetime import datetime, timedelta
-from libpysal.weights import DistanceBand
+import libpysal as ps
 from esda import G as getis_ord_G
 from esda.getisord import G_Local
+import streamlit as st
+from math import radians, cos, sin, asin, sqrt
 import scipy
 scipy.inf=np.inf
 
@@ -61,8 +63,8 @@ def get_localG(pm25_df, threshold=1.5, target='pm2.5'):
 
     #Create a weight matrix using the threshold
     coords = pm25_df[['longitude', 'latitude']].values
-    weights = DistanceBand(coords, threshold=threshold)
     
+    weights = ps.weights.KNN.from_array(coords, k=5)
     y = pm25_df[target].values
 
     #Apply Getis-Ord Local G* test
@@ -117,3 +119,47 @@ def get_hotspot_dates(pm25_df, dates, threshold=1.5, sensor_id_str='site_id', ta
     hotspot_df.reset_index(drop=True, inplace=True)
 
     return hotspot_df
+
+def haversine(lat1, lon1, lat2, lon2):
+    """
+    Converts two points into distance in miles
+
+    (Inputs):
+    - lat1, lon1: coordinates at one point (e.g. your position)
+    - lat2, lon2: coordinates at another point (e.g. a hotspot)
+    """
+    R = 3958.8  
+    dlat = radians(lat2 - lat1)
+    dlon = radians(lon2 - lon1)
+    lat1 = radians(lat1)
+    lat2 = radians(lat2)
+
+    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    c = 2 * asin(sqrt(a))
+    return R * c
+
+def find_closest_hotspot(hotspots, lat, lon, cutoff=0.1):
+    """
+    Finds the closest hotspot to a given location within a cutoff.
+
+    (Inputs):
+    - hotspots: dataframe of hotspots with 'latitude' and 'longitude' columns.
+    - lat, lon: inputted latitude and longitude
+    - cutoff: cutoff in degrees for latitude and longitude difference (defaults to 0.1)
+    """
+    hotspots_filtered = hotspots[
+        (hotspots['latitude'].between(lat - cutoff, lat + cutoff)) &
+        (hotspots['longitude'].between(lon - cutoff, lon + cutoff))
+    ]
+
+    if hotspots_filtered.empty:
+        return None, None
+
+    hotspots_filtered = hotspots_filtered.copy()
+    hotspots_filtered['distance_miles'] = hotspots_filtered.apply(
+        lambda row: haversine(lat, lon, row['latitude'], row['longitude']),
+        axis=1
+    )
+
+    closest = hotspots_filtered.loc[hotspots_filtered['distance_miles'].idxmin()]
+    return closest, closest['distance_miles']

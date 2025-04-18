@@ -1,0 +1,124 @@
+---
+Pasadena:
+
+    sensor_name:
+    - "3298"
+    - "3396"
+    - "2386"
+
+    description: |
+        Pasadena has been historically affected by industrial activity, particularly from nearby refineries, such as the Shell Pemex facility in Deer Park. A recent incident at this facility released hydrogen sulfide, a toxic gas that led to a shelter-in-place order for both Deer Park and Pasadena on October 11, 2024. This release killed one person and injured several others.
+
+        Read more on this story at this link: [Shelter-in-place ordered for 2 east Texas cities after chemical release kills 1 person.](https://www.usatoday.com/story/news/nation/2024/10/10/shell-pemex-deer-park-shelter-in-place/75619703007/)
+
+Seabrook:
+
+    sensor_name:
+    - "208397"
+    - "Seabrook_Friendship_Park"
+
+    description: | 
+        Seabrook, a city located near the Houston Ship Channel, is also located near industrial facilities, including chemical plants like Lubrizol Corp. On August 15, 2021, a rail car release near Deer Park led to a shelter-in-place order for Seabrook and La Porte. The release, initially suspected to involve hydrogen sulfide, was later determined to be caused by mercaptan—a sulfur-based compound used to give natural gas its characteristic odor. Residents reported a range of symptoms, including headaches, dizziness, burning eyes, nausea, and vomiting. 
+
+        Read more on this story at this link: [Confusion surrounds smell that prompted Sunday night shelter-in-place order in La Porte, Seabrook](https://www.houstonchronicle.com/news/houston-texas/environment/article/Organic-sulfur-material-release-caused-16390151.php)
+
+Channelview:
+
+    sensor_name:
+    - "186327"
+    - "166441"
+    - "186271"
+    - "27905"
+    - "148709"
+    - "166381"
+    - "166399"
+    - "186277"
+
+    description: |
+
+        Channelview is a predominantly Latino community located directly along the Houston Ship Channel and has long been affected by severe air pollution from nearby industrial facilities. K-Solv, a chemical distribution and barge-cleaning plant, is one such facility. For nearly two decades, Texas regulators have documented alarming benzene levels near K-Solv, surpassing even the state's already lenient safety guidelines, resulting in some regulatory actions by the Texas Commission on Environmental Quality, such as fines and violations. Benzene is a known contributor to increased risks of serious health conditions such as leukemia and respiratory issues. The plant has also experienced several fires, including a massive blaze in 2021. 
+
+        Read more on this story here: [Levels of cancer-causing benzene reached new heights in beleaguered Channelview, Texas. Regulators never told residents.](https://www.ehn.org/benzene-channelview-texas)
+
+        [Strange smell and vapors from Channelview chemical plant alarm neighbors](https://www.click2houston.com/news/local/2024/11/17/strange-smell-and-vapors-from-channelview-chemical-plant-alarm-neighbors/)
+
+Baytown:
+
+    sensor_name:
+    - "166413"
+
+    description: | 
+        Baytown lies at the heart of the petrochemical industry, hosting a cluster of chemical plants and industrial facilities.
+
+        On December 10, 2024, Bluebonnet Petrochemical Solutions facility experienced a fire and subsequent chemical leak. Chemicals were released into nearby soil and water, and residents were warned to avoid using well water. This accompanied known, ongoing safety practices such as storing chemicals in unlabeled, unpermitted containers.
+
+        Read more on this story here: [Chemical leak reported after fire at Baytown facility, officials say](https://www.khou.com/article/news/local/chemical-leak-baytown/285-63007cdd-abab-42be-9590-15912502e3ef)
+
+        The San Jacinto River Waste Pits, meanwhile, is a Superfund site contaminated by toxic dioxins. Due to cancer rates that are significantly higher than the state average, the area has been designated a "cancer cluster." Despite decades of pressure, parties such as the International Paper and Waste Management have delayed efforts, leaving local residents frustrated and demanding action.
+
+        Read more on this story here: [Cancer cluster tag adds urgency to Waste Pits cleanup](https://baytownsun.com/local/cancer-cluster-tag-adds-urgency-to-waste-pits-cleanup/article_f87e4fea-f314-11ef-a2de-a3b43ea1a087.html)
+
+Deer_Park:
+
+    sensor_name:
+    - "50567"
+    - "128007"
+    - "Houston_Deer_Park"
+
+    description: |
+        Deer Park is surrounded by refineries and chemical plants. In October, 2024, a hydrogen sulfide leak at the PEMEX plant resulted in the deaths of two contract workers and injuries to 35 others. Despite using supplied-air respirators, workers were not equipped with personal gas detectors. Furthermore, a failure of the city’s emergency alert system caused confusion and delayed warnings to local residents. 
+    
+        Read more on this story here: [Deadly Deer Park chemical leak triggered by incorrect flange opening, safety board says](https://www.houstonpublicmedia.org/articles/news/local/2024/11/21/506735/deadly-deer-park-chemical-leak-triggered-by-incorrect-flange-opening-safety-board-says/)
+
+        [Workers died trying to flee PEMEX gas leak in Deer Park](https://www.click2houston.com/news/local/2025/03/28/workers-died-trying-to-flee-pemex-gas-leak-in-deer-park-investigation-update-reveals/)
+
+Galena_Park:
+
+    sensor_name:
+    - "166435"
+    - "AAH_15th_Street"
+    - "AAH_GP_Manor"
+    - "Clinton"
+
+    description: |
+    
+        Galena Park is located near the Houston Ship Channel and is thus exposed to the activities of several industrial sites. 
+    
+        In 2024, a coalition of environmental groups discovered 11 harmful substances—including arsenic, benzidine, and dioxins—at levels far above federal safety guidelines. These substances are known to cause developmental and neurological issues, as well as increasing the risk of cancer. The dredging process used in the Houston Ship Channel’s expansion project has exacerbated the issue, with contaminated sludge being deposited near residential areas and even across from a local baseball field. 
+    
+        Read more on this story here: [Cancer-causing chemicals found in Houston Ship Channel sediment as expansion project continues](https://www.houstonpublicmedia.org/articles/news/energy-environment/2024/06/11/490260/cancer-causing-chemicals-found-in-houston-ship-channel-sediment-as-expansion-project-continues/)
+    
+        Furthermore, in April 2024, a flash fire at Kinder Morgan's facility injured three people. The fire occurred during routine maintenance work at the chemical plant. 
+    
+        Read more on this story here: [Fire at Kinder Morgan chemical plant in Galena Park injures 3, officials say](https://www.fox26houston.com/news/galena-park-chemical-plant-flash-fire-injures-3)
+
+Settegast:
+
+    sensor_name:
+    - "Glen_Manor"
+    - "Lebate"
+    - "Houston_North_Wayside"
+    - "AAH_Kelford"
+
+    description: |
+    
+        Settegast is located in Northeast Houston, and has been historically the home of a primarily African American population. With a life expectancy of just 66 years (the lowest in Harris County), it faces some of the starkest disparities in housing, health, and environmental conditions in the city. It is located near two active landfills, as well as many industrial sites, poorly maintained drainage systems, sites where waste is often illegally dumped.
+    
+        Read more here: [Settegast: A case study in endemic racism within Houston’s housing system](https://kinder.rice.edu/urbanedge/settegast-case-study-endemic-racism-within-houstons-housing-system)
+    
+        [This neighborhood has the shortest life expectancy in Harris County. A grant is trying to change that.](https://www.houstonchronicle.com/news/houston-texas/housing/article/harris-county-life-expectancy-settegast-grant-17713960.php)
+
+
+Kashmere_Gardens:
+
+    sensor_name:
+    - "181765"
+    - "AAH_KG_Englewood"
+
+    description: | 
+    
+        Kashmere Gardens is a historically underserved neighborhood in Houston. This area, along with the Fifth Ward, has historically been associated with higher rates of cancer, resulting in areas being designated as “cancer clusters.” It is located near an old Union Pacific Railroad yard that used chemicals like creosote, a known carcinogen. Recent soil testing results by the EPA confirmed the presence of other carcinogens like dioxin. This situation is developing, alongside recent federal budget cuts and staffing reductions at the EPA.
+    
+        Read more on these stories here: [EPA shares soil testing results to Fifth Ward, Kashmere Gardens residents in known cancer cluster](https://abc13.com/post/houstons-fifth-ward-kashmere-gardens-residents-urged-attend-epa-meeting-soil-testing-results-known-cancer-cluster/15959673/)
+    
+        [Uncertainty at EPA causes concerns about cancer cluster investigation in Houston](https://www.houstonpublicmedia.org/articles/news/energy-environment/2025/02/04/512925/uncertainty-at-epa-causes-concerns-about-cancer-cluster-investigation-in-houston/)

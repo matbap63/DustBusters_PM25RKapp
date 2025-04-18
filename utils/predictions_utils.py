@@ -3,6 +3,8 @@ from scipy.spatial import cKDTree
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 import datetime
+import yaml
+import streamlit as st
 import os
 
 def load_pickle(model_type, date):
@@ -89,4 +91,7 @@ def get_pred(lat, lon, pm25_df):
 
     return distance < 0.001, pm25_df.iloc[index]
 
-
+@st.cache_data
+def load_hotspot_info():
+    with open("./hotspot_info.yaml", "r") as f:
+        return yaml.safe_load(f)

@@ -212,7 +212,7 @@ def add_hotspots(map_hstn, hotspots, coldspots):
             icon=folium.Icon(color='red', icon='fire', prefix='glyphicon'),
             radius=8,
             color='red',
-            popup=f"Site ID: {row['site_id']}<br>Hotspot (localG = {row['local_G']}"
+            popup=f"{row['sensor_name']}<br>Hotspot ({round(row['local_G'], 3)})"
         ).add_to(map_hstn)
 
     #Add markers for the coldspots (in blue)
@@ -222,7 +222,7 @@ def add_hotspots(map_hstn, hotspots, coldspots):
             icon=folium.Icon(color='blue', icon='snowflake', prefix='fa'),
             radius=8,
             color='blue',
-            popup=f"Site ID: {row['site_id']}<br>Coldspot (localG = {row['local_G']}"
+            popup=f"{row['sensor_name']}<br>Coldspot ({round(row['local_G'], 3)})"
         ).add_to(map_hstn)
 
     filename = f'./houston_kriging_map.html'
