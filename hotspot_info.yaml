@@ -58,7 +58,7 @@ Baytown:
 
         Read more on this story here: [Cancer cluster tag adds urgency to Waste Pits cleanup](https://baytownsun.com/local/cancer-cluster-tag-adds-urgency-to-waste-pits-cleanup/article_f87e4fea-f314-11ef-a2de-a3b43ea1a087.html)
 
-Deer_Park:
+Deer Park:
 
     sensor_name:
     - "50567"
@@ -72,7 +72,7 @@ Deer_Park:
 
         [Workers died trying to flee PEMEX gas leak in Deer Park](https://www.click2houston.com/news/local/2025/03/28/workers-died-trying-to-flee-pemex-gas-leak-in-deer-park-investigation-update-reveals/)
 
-Galena_Park:
+Galena Park:
 
     sensor_name:
     - "166435"
@@ -109,7 +109,7 @@ Settegast:
         [This neighborhood has the shortest life expectancy in Harris County. A grant is trying to change that.](https://www.houstonchronicle.com/news/houston-texas/housing/article/harris-county-life-expectancy-settegast-grant-17713960.php)
 
 
-Kashmere_Gardens:
+Kashmere Gardens:
 
     sensor_name:
     - "181765"
