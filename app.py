@@ -205,7 +205,7 @@ if use_alternate_viz:
 #
 ###############################################
 
-hotspots_info = st.checkbox("Want to know more about potential hotspots and coldspots?")
+hotspots_info = st.checkbox("Want to know more about potential hotspots?")
 
 if hotspots_info:
 
@@ -220,16 +220,15 @@ if hotspots_info:
     spots = core_data_sub[core_data_sub['p_val'] < 0.05]
 
     hotspots = spots[spots['local_G'] > 0]
-    coldspots = spots[spots['local_G'] < 0]
 
-    if hotspots.empty and coldspots.empty:
+    if hotspots.empty:
 
-        st.write("There are no hotspots or coldspots on this map.")
+        st.write("There are no detectable hotspots on this map.")
 
     else:
 
-        st.write(f"There are {hotspots.shape[0]} hotspots and {coldspots.shape[0]} coldspots on this map.")
-        map_obj_HC = add_hotspots(map_obj, hotspots, coldspots)
+        st.write(f"There are {hotspots.shape[0]} potential hotspots on this map.")
+        map_obj_HC = add_hotspots(map_obj, hotspots)
         with open("houston_kriging_map.html", 'r', encoding='utf-8') as HtmlFile:
             source_code = HtmlFile.read()
             components.html(source_code, height=600, width=1000)
@@ -238,7 +237,7 @@ if hotspots_info:
 
         if closest is not None:
             closest_name = closest['sensor_name']
-            st.write(f"You are {distance:.2f} miles away from hotspot: **{closest_name}**")
+            st.write(f"You are {distance:.2f} miles away from this hotspot: **{closest_name}**")
 
             hotspot_groups = load_hotspot_info()
 

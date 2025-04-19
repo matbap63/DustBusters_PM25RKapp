@@ -191,15 +191,14 @@ def plot_interpolation_relative(pm25_df, date, core_data, long, lat):
     map_hstn.save(filename)
     return map_hstn
 
-def add_hotspots(map_hstn, hotspots, coldspots):
+def add_hotspots(map_hstn, hotspots):
     """
-    Given a map and locations of hotspots and coldspots, will add the important spots to the
+    Given a map and locations of hotspots, will add the important spots to the
     map.
 
     (Inputs):
     - map_hstn: a map of the predictions
     - hotspots: a dataframe of hotspots
-    - coldspots: a dataframe of coldspots
 
     (Outputs):
     - map_hstn: a map with the spots added
@@ -213,16 +212,6 @@ def add_hotspots(map_hstn, hotspots, coldspots):
             radius=8,
             color='red',
             popup=f"{row['sensor_name']}<br>Hotspot ({round(row['local_G'], 3)})"
-        ).add_to(map_hstn)
-
-    #Add markers for the coldspots (in blue)
-    for idx, row in coldspots.iterrows():
-        folium.Marker(
-            location=[row['latitude'], row['longitude']],
-            icon=folium.Icon(color='blue', icon='snowflake', prefix='fa'),
-            radius=8,
-            color='blue',
-            popup=f"{row['sensor_name']}<br>Coldspot ({round(row['local_G'], 3)})"
         ).add_to(map_hstn)
 
     filename = f'./houston_kriging_map.html'
