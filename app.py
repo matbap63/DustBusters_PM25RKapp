@@ -74,6 +74,8 @@ raster_features = st.multiselect(
 
 in_grid = check_within_grid(lat, lon)
 
+prediction_df = None
+
 if not in_grid:
     st.error("Your location is outside the interpolation grid. Please select a different point.")
     st.stop()
@@ -135,6 +137,14 @@ elif 15.0 <= your_prediction < 35.0:
     color = 'orange'
 else:
     color = 'red'
+
+
+st.download_button(
+    label="Export Predictions as CSV",
+    data=prediction_df.to_csv(index=False).encode('utf-8'),
+    file_name=datetime.now().strftime("data_%Y-%m-%d_%H-%M-%S.csv"),
+    mime='text/csv',
+)
 
 st.header('PM2.5 at your location')
 st.markdown(
